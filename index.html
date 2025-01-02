@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Text Generator</title>
+    <link rel="stylesheet" href="default.css">
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid d-flex justify-content-center">
+        <h3 class="my-0 text-center">SVG Text Generator</h3>
+      </div>
+    </header>
+    <div class="container-fluid pt-3">
+      <div class="card mb-3">
+        <div class="card-header">Your text</div>
+        <div class="card-body">
+          <div class="form-group mb-0">
+            <input type="text" id="userInput" class="form-control" placeholder="Enter your text here">
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-header">Text Color</div>
+        <div class="card-body">
+          <div class="form-group mb-0">
+            <input type="color" id="textColor" class="form-control" value="#ffffff">
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-header">Background Color</div>
+        <div class="card-body">
+          <div class="form-group mb-0">
+            <input type="color" id="bgColor" class="form-control" value="#002a59">
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-header">Accent Color</div>
+        <div class="card-body">
+          <div class="form-group mb-0">
+            <input type="color" id="accentColor" class="form-control" value="#ff0021">
+          </div>
+          <small class="form-text text-muted">Text can be accented by putting it between brackets like: &lt;Text&gt;</small>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-header">Margins (px)</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <label for="marginTop" class="form-label">Top</label>
+              <input type="number" id="marginTop" class="form-control" value="20" min="0">
+            </div>
+            <div class="col">
+              <label for="marginBottom" class="form-label">Bottom</label>
+              <input type="number" id="marginBottom" class="form-control" value="28" min="0">
+            </div>
+            <div class="col">
+              <label for="marginLeft" class="form-label">Left</label>
+              <input type="number" id="marginLeft" class="form-control" value="20" min="0">
+            </div>
+            <div class="col">
+              <label for="marginRight" class="form-label">Right</label>
+              <input type="number" id="marginRight" class="form-control" value="20" min="0">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-header">Font Size (px)</div>
+        <div class="card-body">
+          <div class="form-group mb-0">
+            <input type="number" id="fontSize" class="form-control" value="32" min="1">
+          </div>
+        </div>
+      </div>
+      <button id="generateButton" class="btn btn-primary mb-3">Generate SVG</button>
+      <div class='card mb-3' id="svgCard" style="display:none">
+        <div class='card-header'>Generated SVG</div>
+        <div class='card-body'>
+          <div id="svgContainer" class="text-center"></div>
+          <a id="downloadButton" class="btn btn-link text-center mt-3" style="display:none">Download SVG</a>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
